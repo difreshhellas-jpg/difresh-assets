@@ -65,3 +65,14 @@ Photographs that have appeared in a shipped asset this cycle. 7 of 43 spent, 36 
   Playfair Display, Rubik, Space Grotesk, Space Mono.
 - The system font tree here carries only DejaVu. Lato, Nimbus Sans Narrow, URW Gothic and
   Carlito named in the brief are not installed.
+
+## PUBLISH RECORD
+- 2026-08-12: pushed to difreshhellas-jpg/posts@main under `2026-08-12/` (PNG + PDF).
+  Canva designs, all moved to folder FAHR5ym_TeY, each carrying one CAPTION comment:
+  01 DAHSD5hpuVk, 02 DAHSDxGJZFI, 03 DAHSD5MoXqY,
+  04 DAHSD_UFbJ0, 05 DAHSD_eEKmw, 06 DAHSD6CSpkU.
+- Substitution to note for future runs: `import-design-from-url` REJECTS raw .png
+  ("invalid_file"); its supported list is PDF, PPTX, DOCX, XLSX, CSV, HTML, Markdown, PSD, AI,
+  Keynote, Pages, Numbers. Fix used: alongside each PNG, write a lossless single page PDF at
+  exactly 1080x1350 pt (img2pdf with a fixed 72 dpi layout, FlateDecode passthrough, no
+  recompression), push both, and import the PDF. Go straight to the PDF next run.
