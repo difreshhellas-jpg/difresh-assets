@@ -1,0 +1,52 @@
+{
+  "test_cases": [
+    {
+      "id": "bistrot-redesign",
+      "prompt": "We just redesigned Bistrot Creperie's menu. It went from 5 pages to 4, dark chalkboard aesthetic, gold accents, baroque frames. We want to show the design and tell the story of the condensed process.",
+      "expected_brand_inspiration": ["Chanel", "Valentino"],
+      "expected_layout_type": "centered or asymmetric",
+      "expected_mood": "elegant, sophisticated, craft-focused",
+      "evaluation": "Should output a spec that positions this as heritage/craft storytelling (Chanel) with artistic depth (Valentino)"
+    },
+    {
+      "id": "difresh-core-announcement",
+      "prompt": "DIFRESH is launching a new automation tool for creative studios. It's about efficiency + creativity. We want to position this as a game-changer for designers and teams.",
+      "expected_brand_inspiration": ["Givenchy", "Nike"],
+      "expected_layout_type": "minimal or asymmetric",
+      "expected_mood": "bold, technical, empowering",
+      "evaluation": "Should blend Givenchy's minimalism (clean, technical) with Nike's directness (action-oriented, empowering)"
+    },
+    {
+      "id": "process-behind-scenes",
+      "prompt": "Behind-the-scenes content: showing the design process for A Sip of Art packaging. Close-ups of hands, sketches, refinement stages. Want to show the artisanal side of our work.",
+      "expected_brand_inspiration": ["Hermès", "Valentino"],
+      "expected_layout_type": "narrative or cinematic",
+      "expected_mood": "warm, artisanal, intimate",
+      "evaluation": "Should emphasize craft storytelling (Hermès) and artistic vision (Valentino)"
+    },
+    {
+      "id": "product-launch-seasonal",
+      "prompt": "New seasonal product line (Teacasso Iced Tea fall collection). Bold launch. Want to feel premium, seasonal, artistic.",
+      "expected_brand_inspiration": ["Dior", "Givenchy"],
+      "expected_layout_type": "full-bleed or clean minimal",
+      "expected_mood": "dramatic, seasonal, artistic",
+      "evaluation": "Should blend Dior's drama (seasonal, artistic) with Givenchy's minimalism (refined, intentional)"
+    },
+    {
+      "id": "generic-daily-post",
+      "prompt": "Daily DIFRESH Instagram post about our work. Just want it to look premium, not generic.",
+      "expected_brand_inspiration": "DIFRESH blend",
+      "expected_layout_type": "should offer balanced approach",
+      "expected_mood": "sophisticated, minimal, professional",
+      "evaluation": "When no specific brief is given, should default to DIFRESH blend (Givenchy + Chanel + Hermès)"
+    }
+  ],
+  "evaluation_criteria": {
+    "brand_matching": "Does the suggested brand inspiration fit the brief?",
+    "layout_appropriateness": "Is the layout recommendation useful for the content type?",
+    "color_palette_quality": "Are the color recommendations premium-feeling and brand-appropriate?",
+    "copy_tone_alignment": "Does the suggested copy tone match the brief and brand inspiration?",
+    "actionability": "Can a designer/content creator use this spec to actually create a post?",
+    "premium_feeling": "Does the spec elevate the perceived quality vs generic posts?"
+  }
+}
