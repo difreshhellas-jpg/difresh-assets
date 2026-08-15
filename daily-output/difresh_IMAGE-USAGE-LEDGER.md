@@ -1,18 +1,25 @@
 # DIFRESH IMAGE USAGE LEDGER
 
-Cycle 1. Updated 2026-08-13.
+Cycle 1. Updated 2026-08-15.
 
-The rule: no photograph is reused until every photograph in the pool has been used once.
+The rule: no reference image is reused until every eligible image in the pool has been used once.
 
-**Working pool: 42.** Of the 43 files in the repo, the 33 named `gpt-image-2_*` are excluded
-permanently as AI generated, and the single `tauro/` frame is never selectable because that line
-is discontinued.
+**Pool revised 2026-08-15.** The prior definition excluded all 33 `gpt-image-2_*` files as AI
+generated. That exclusion is withdrawn per the 2026-08-14 brief revision, which confirms the STUDIO
+renders are valid reference material for the local AI generation step.
 
-**Spent: 14. Remaining in cycle 1: 28.**
+Of the 69 files in the repo, two are permanently excluded:
+
+- `tauro/tauro-product.jpeg`, discontinued line
+- `STUDIO/gpt-image-2_professional_photo_of_just_make_it_for_16_9_dont_change_anythingjust_make_it_for-0 (3).jpg`,
+  which is a **Tauro product filed under `STUDIO/`**. Confirmed by eye on 2026-08-15. The filename
+  gives no clue.
+
+**Working pool: 67. Spent: 20. Remaining in cycle 1: 47.**
 
 ## Spent
 
-| # | Photograph | Run | Asset |
+| # | Reference image | Run | Asset |
 |---|---|---|---|
 | 1 | frozen-force/frozenforce-mountain.jpg | 2026-08-12 | 01 |
 | 2 | souvenir/souvenir-green-airport-security.jpg | 2026-08-12 | 02 |
@@ -28,31 +35,52 @@ is discontinued.
 | 12 | souvenir/souvenir-green-beach.jpg | 2026-08-13 | 04 |
 | 13 | souvenir/souvenir-green-slate-rosemary-flatlay.jpg | 2026-08-13 | 05 |
 | 14 | souvenir/souvenir-green-woodtable.jpg | 2026-08-13 | story |
+| 15 | atom/studio/gpt-image-2_can_you_make_a_cinematic_shot_of_this_atomizer_floating_diagonal_alignment_while-0.jpg | 2026-08-15 | 01 |
+| 16 | STUDIO/gpt-image-2_professional_photo_of_just_make_it_for_16_9_dont_change_anythingjust_make_it_for-0 (10).jpg | 2026-08-15 | 02 |
+| 17 | STUDIO/gpt-image-2_professional_photo_of_just_make_it_for_16_9_dont_change_anything_photography-0 (2).jpg | 2026-08-15 | 03 |
+| 18 | frozen-force/frozenforce-snow.jpg | 2026-08-15 | 04 |
+| 19 | souvenir/souvenir-green-marble-bathroom.jpg | 2026-08-15 | 05 |
+| 20 | souvenir/souvenir-green-teal-coral-cube.jpg | 2026-08-15 | story |
 
-## Remaining in cycle 1 (28)
+## Remaining in cycle 1 (47)
 
-atom/editorial: atom-black-botanicals-flatlay, atom-black-linen-flatlay, atom-black-smoke,
+**atom/editorial (5):** atom-black-botanicals-flatlay, atom-black-linen-flatlay, atom-black-smoke,
 atom-black-travertine, atom-black-window-burlap.
 
-atom/studio: atom-black-blackbg, atom-black-whitebg-01, atom-black-whitebg-02.
+**atom/studio (4):** atom-black-blackbg, atom-black-whitebg-01, atom-black-whitebg-02,
+`gpt-image-2_can_you_make_a_cinematic_shot_of_this_atomizer_floating_diagonal_alignment_while-0 (2).jpg`.
 
-frozen-force: frozenforce-burlap-window, frozenforce-smoke, frozenforce-snow,
-frozenforce-tropical-fruit, frozenforce-whitebg-01.
+**frozen-force (4):** frozenforce-burlap-window, frozenforce-smoke, frozenforce-tropical-fruit,
+frozenforce-whitebg-01.
 
-souvenir: souvenir-green-bedsheets, souvenir-green-books-candle, souvenir-green-crackedearth,
-souvenir-green-dashboard-dusk-02, souvenir-green-gym, souvenir-green-herbs-aloe-flatlay,
-souvenir-green-kraftpaper, souvenir-green-marble-bathroom, souvenir-green-rocks-water,
-souvenir-green-smoke-slate, souvenir-green-teal-coral-cube, souvenir-green-tropical,
-souvenir-green-wetsurface, souvenir-green-whitebg-02, souvenir-green-yellowbg.
+**souvenir (13):** souvenir-green-bedsheets, souvenir-green-books-candle,
+souvenir-green-crackedearth, souvenir-green-dashboard-dusk-02, souvenir-green-gym,
+souvenir-green-herbs-aloe-flatlay, souvenir-green-kraftpaper, souvenir-green-rocks-water,
+souvenir-green-smoke-slate, souvenir-green-tropical, souvenir-green-wetsurface,
+souvenir-green-whitebg-02, souvenir-green-yellowbg.
+
+**STUDIO (21):** all remaining `gpt-image-2_*` frames except the two spent on 2026-08-15 and the
+one permanently excluded Tauro frame. Contents by eye, from the 2026-08-15 contact sheet:
+one Durex Sensitive carton on red, one Durex Classic carton (spent), one Frozen Force bottle on
+black, and eighteen renders of the toothbrush paste combo tube in individual shades, most on a
+near black ground with a mirror reflection.
 
 ## Standing note on the pool
 
-Verdicts belong to a photograph on a date, never carried over. Two filenames are actively
-misleading and were caught only by looking at the contact sheet: `frozenforce-whitebg-01` and
-`souvenir-green-whitebg-02` are both shot on a near black ground, not white. Judge every frame
-from the contact sheet, never from its name.
+Verdicts belong to an image on a date, never carried over.
 
-Roughly half the remaining pool is a small product lit on a near black ground, often with a mirror
-reflection. Under the no crop rule those frames mostly cannot carry a plate, because the product
-occupies too little of the rectangle to read at plate size. The environmental and editorial frames
-are the strongest remaining material.
+**Never guess a file from its name.** Every STUDIO filename is the same truncated prompt fragment,
+so the names carry no information at all. The 2026-08-15 run nearly shipped a Tauro product because
+of this. Two older traps still hold: `frozenforce-whitebg-01` and `souvenir-green-whitebg-02` are
+both shot on a near black ground, not white.
+
+Roughly half the remaining pool is a small product lit on a near black ground with a mirror
+reflection. Those are weak references for the AI generation step, because the product occupies too
+little of the frame for the generator to lock onto its details. Prefer the environmental and
+editorial frames when there is a choice.
+
+Several of the strongest remaining environmental frames are lit warm, on cream linen, kraft paper
+or travertine. Section 5 bans that palette in the generated imagery as well as in the graphic
+layer, so the image prompt has to actively regrade them cold. Slot 05 on 2026-08-15 is the worked
+example: the reference is a warm bathroom with a brass tap, and the prompt specifies cool north
+light, grey white marble and brushed steel instead.
