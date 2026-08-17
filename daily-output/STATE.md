@@ -1,6 +1,21 @@
 # DIFRESH DAILY OUTPUT, RUN STATE
 
-Last updated: 2026-08-17
+Last updated: 2026-08-17 (second firing, 07:35 UTC)
+
+## SCHEDULING HAZARD, READ FIRST
+
+**The routine fired twice for the same calendar day 2026-08-17.** The first firing ran at
+2026-08-16 21:03 to 21:08 UTC but was handed `2026-08-17` as its date, so it labelled and shipped a
+complete 2026-08-17 batch (six Canva designs plus a story) while the system clock still said
+2026-08-16. The second firing ran at 2026-08-17 07:35 UTC with the same date in hand.
+
+The second firing correctly did NOT regenerate. Per Section 9's dedup rule it checked the Canva
+folder, found `DIFRESH 2026-08-17 01` through `06` already present, filed and captioned, and left
+them alone. Producing a second batch would have handed the local publisher twelve posts to push to
+Instagram and Facebook on one day.
+
+If a future run finds a complete batch already shipped for its date, do the same: verify, fix any
+genuine gap, update this file, and do not duplicate. Do not spend the image pool twice on one day.
 
 ## PIPELINE
 
@@ -229,17 +244,24 @@ Photographs that have appeared in a shipped asset or brief this cycle. 33 of 67 
 
 ## PUBLISHING ROUTE, IMPORTANT, READ BEFORE SECTION 9
 
-**The `difreshhellas-jpg/posts` repo cannot be written from this sandbox.** Confirmed 2026-08-17
-on both available paths:
-- `git push` to it returns `remote: access denied by the git proxy: difreshhellas-jpg/posts is not
-  in this session's authorized repository set, so the proxy will not inject a credential for it`,
-  then HTTP 403. An anonymous `git clone` of it still works, so it is readable but not writable.
-- The GitHub MCP server returns `Access denied: repository "difreshhellas-jpg/posts" is not
-  configured for this session. Allowed repositories: difreshhellas-jpg/difresh-assets`.
-This is session configuration, not a transient failure, so retrying it is wasted effort. Fixing it
-means adding `difreshhellas-jpg/posts` to the session's authorized sources.
+**RESOLVED 2026-08-17 07:36 UTC. The `difreshhellas-jpg/posts` repo IS writable again.** The
+session's authorized repository set now contains BOTH `difresh-assets` and `posts`, and a real
+commit was pushed to `posts@main` to confirm it, not just a dry run. Section 9b's stated route is
+therefore live again: push finished PNGs to `posts` under `<date>/` and serve them from
+`https://raw.githubusercontent.com/difreshhellas-jpg/posts/main/<date>/<file>.png`.
 
-**Working route used on 2026-08-17.** `difreshhellas-jpg/difresh-assets` is PUBLIC
+One sandbox quirk to expect: the pre-cloned `posts` checkout arrives on a DETACHED HEAD, so a bare
+`git push -u origin main` fails with `src refspec main does not match any`. That is not an access
+failure. Run `git checkout -B main origin/main` first, then push.
+
+*Superseded, kept for history.* Through 2026-08-17's first firing, `posts` was NOT writable:
+`git push` returned `remote: access denied by the git proxy: difreshhellas-jpg/posts is not in this
+session's authorized repository set`, then HTTP 403, and the GitHub MCP server returned
+`Access denied: repository "difreshhellas-jpg/posts" is not configured for this session.` That run
+routed its PNGs into `difresh-assets/daily-output/<date>/` instead. The second firing pushed the
+same seven files to `posts/2026-08-17/`, so both copies now exist for that date.
+
+**Fallback route if `posts` ever goes unwritable again.** `difreshhellas-jpg/difresh-assets` is PUBLIC
 (`api.github.com/repos/...` reports `"private": false`), so its raw URLs are fetchable by Canva.
 Push the finished PNGs to `daily-output/<date>/` in difresh-assets and use
 `https://raw.githubusercontent.com/difreshhellas-jpg/difresh-assets/main/daily-output/<date>/<file>.png`
@@ -281,3 +303,11 @@ No `resize-design` was needed, because the copied base is already 1080x1350.
   04 DAHSfdr08Ds, 05 DAHSfUqXsqc, 06 DAHSfedDEb4.
   The story `difresh_2026-08-17_story.png` was rendered and pushed but, per Section 9c, never sent
   to Canva. Contact sheets at `outputs/contact-sheet-2026-08-17-A.png` and `-B.png`.
+- 2026-08-17, SECOND FIRING (07:35 UTC). No new assets, by design, see SCHEDULING HAZARD above.
+  Verified the existing batch instead: all six designs present in folder FAHR5ym_TeY, each with
+  exactly one CAPTION comment, Greek captions correctly on the Greek slots 03 and 05, all six PNGs
+  1080x1350 and the story 1080x1920. Re-sampled slot 01's pink accent line against its rendered
+  ground, 5.19:1, passes. Closed the one real gap: with `posts` writable again, pushed all seven
+  2026-08-17 PNGs to `difreshhellas-jpg/posts@main` under `2026-08-17/` and confirmed all seven raw
+  URLs return HTTP 200 at full byte length. The image pool was NOT spent a second time; CONSUMED is
+  unchanged at 33 of 67.
